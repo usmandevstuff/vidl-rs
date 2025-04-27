@@ -99,7 +99,7 @@ fn main() {
     }
 
     if output != "current" {
-        cmd.arg("-o").arg(output);
+        cmd.arg("-o").arg(output + "/%(title)s.%(ext)s");
     } else {
         cmd.arg("-o").arg("%(title)s.%(ext)s");
     }
