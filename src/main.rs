@@ -41,7 +41,7 @@ struct Cli {
     #[arg(
         short,
         long,
-        help = "video quality[eg: 1080, 720, 480, 360, 240, 144]",
+        help = "video quality[eg: 2160, 1440, 1080, 720, 480, 360, 240, 144]",
         default_value = "best"
     )]
     quality: String,
