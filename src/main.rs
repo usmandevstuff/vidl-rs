@@ -73,6 +73,8 @@ fn main() {
         cmd.arg("-F");
     } else if ext == "mp4" {
         let format = match quality.as_str() {
+            "2160" => "bestvideo[height<=2160][ext=mp4]+bestaudio",
+            "1440" => "bestvideo[height<=1440][ext=mp4]+bestaudio",
             "1080" => "bestvideo[height<=1080][ext=mp4]+bestaudio",
             "720" => "bestvideo[height<=720][ext=mp4]+bestaudio",
             "480" => "bestvideo[height<=480][ext=mp4]+bestaudio",
@@ -84,6 +86,8 @@ fn main() {
         cmd.arg("-f").arg(format);
     } else if ext == "webm" {
         let format = match quality.as_str() {
+            "2160" => "bestvideo[height<=2160][ext=webm]+bestaudio",
+            "1440" => "bestvideo[height<=1440][ext=webm]+bestaudio",
             "1080" => "bestvideo[height<=1080][ext=webm]+bestaudio",
             "720" => "bestvideo[height<=720][ext=webm]+bestaudio",
             "480" => "bestvideo[height<=480][ext=webm]+bestaudio",
